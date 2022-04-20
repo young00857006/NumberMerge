@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3B8623E2810037F0085560D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D3F5293C280E9254000CCECE /* NumberMerge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberMerge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F5293F280E9254000CCECE /* NumberMergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMergeApp.swift; sourceTree = "<group>"; };
 		D3F52941280E9254000CCECE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		D3F5293E280E9254000CCECE /* NumberMerge */ = {
 			isa = PBXGroup;
 			children = (
+				D3B8623E2810037F0085560D /* Info.plist */,
 				D3F5293F280E9254000CCECE /* NumberMergeApp.swift */,
 				D3F52941280E9254000CCECE /* ContentView.swift */,
 				D3F52943280E9258000CCECE /* Assets.xcassets */,
@@ -269,6 +271,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NumberMerge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumberMerge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +300,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NumberMerge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumberMerge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
