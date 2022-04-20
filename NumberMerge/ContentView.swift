@@ -21,7 +21,7 @@ struct ContentView: View {
     @State private var show = false
     @State private var showSecondView = true
     let player = AVPlayer()
-   
+    
     
     
     func initial(){
