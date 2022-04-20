@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 struct Data: Identifiable{
     let id = UUID()
     var name: Int
@@ -19,6 +20,10 @@ struct ContentView: View {
     @State private var isFull = false
     @State private var show = false
     @State private var showSecondView = true
+    let player = AVPlayer()
+   
+    
+    
     func initial(){
         number = 1
         score = 0
@@ -125,6 +130,12 @@ struct ContentView: View {
                                 .frame(width: 75, height: 75)
                                 .padding(3)
                                 .opacity(0.6)
+                                .onChange(of: show, perform: {value in
+                                    if value{
+                                        player.play()
+                                    }
+                                    
+                                })
                                 .onTapGesture {
                                     if(data.name == -1){
                                         addNumber(index: index)
@@ -198,7 +209,7 @@ struct ContentView: View {
             .resizable()
             .scaledToFill()
             .clipped())
-            
+        
         .animation(.easeInOut(duration: 1),value: show)
         .alert("Your Score : \(score) !!", isPresented: $isFull, actions: {
             HStack{
@@ -214,6 +225,12 @@ struct ContentView: View {
                 showSecondView = false
             }
         })
+        .onAppear {
+            let fileUrl = Bundle.main.url(forResource: "back", withExtension: "mp3")!
+            let playerItem = AVPlayerItem(url: fileUrl)
+            self.player.replaceCurrentItem(with: playerItem)
+            self.player.play()
+        }
     }
 }
 
